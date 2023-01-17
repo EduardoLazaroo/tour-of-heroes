@@ -13,7 +13,7 @@ export class HeroService {
 
   constructor(
     private http: HttpClient,
-    private messageService: MessagesService,
+    private messageService: MessagesService
   ) {}
 
   // GET /heroes
@@ -29,18 +29,33 @@ export class HeroService {
       .get<Hero>(`${this.heroesUrl}/${id}`)
       .pipe(
         tap((hero) =>
-          this.log(`fetched hero(es) id=${id} and name = ${hero.name}`)
+          this.log(`fetched ${this.descAttributes(hero)}`)
         )
       );
   }
 
-  // PUT /heroes/id
-  update(hero: Hero): Observable<Hero>{
-    return this.http.put<Hero>(`${this.heroesUrl}/${hero.id}`, hero).pipe(
+  // POST /heroes
+  create(hero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(this.heroesUrl, hero).pipe(
       tap((hero) =>
-        this.log(`updated hero id=${hero.id} and name = ${hero.name}`)
-      )
-    );
+          this.log(`create ${this.descAttributes(hero)}`)
+        )
+    )
+  }
+
+  // PUT /heroes/id
+  update(hero: Hero): Observable<Hero> {
+    return this.http
+      .put<Hero>(`${this.heroesUrl}/${hero.id}`, hero)
+      .pipe(
+        tap((hero) =>
+          this.log(`updated ${this.descAttributes(hero)}`)
+        )
+      );
+  }
+
+  private descAttributes(hero: Hero): string{
+    return `hero id=${hero.id} and name = ${hero.name}`
   }
 
   private log(message: string): void {
