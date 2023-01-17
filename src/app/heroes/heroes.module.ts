@@ -6,6 +6,8 @@ import { MaterialModule } from '../core/material/material.module';
 import { FormsModule } from '@angular/forms';
 import { DashboardModule } from '../dashboard/dashboard.module';
 import { HeroesRoutingModule } from './heroes-routing.module';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { DashboardRoutingModule } from '../dashboard/dashboard-routing.module';
 
 @NgModule({
   declarations: [HeroesComponent, HeroDetailComponent],
