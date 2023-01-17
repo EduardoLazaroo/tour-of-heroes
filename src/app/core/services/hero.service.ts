@@ -13,7 +13,7 @@ export class HeroService {
 
   constructor(
     private http: HttpClient,
-    private messageService: MessagesService
+    private messageService: MessagesService,
   ) {}
 
   // GET /heroes
