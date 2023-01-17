@@ -73,7 +73,8 @@
               "browserTarget": "curso-tour:build:production"
             },
             "development": {
-              "browserTarget": "curso-tour:build:development"
+              "browserTarget": "curso-tour:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

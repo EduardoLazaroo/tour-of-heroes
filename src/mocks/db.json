@@ -1,0 +1,11 @@
+{
+  "heroes": [
+    { "id": 1, "name": "Wolverine" },
+    { "id": 2, "name": "Mulher Maravilha" },
+    { "id": 3, "name": "Superman" },
+    { "id": 4, "name": "Homem Aranha" },
+    { "id": 5, "name": "Aquaman" },
+    { "id": 6, "name": "Pantera Negra" },
+    { "id": 6, "name": "Capitão America" }
+  ]
+}

@@ -8,9 +8,10 @@ import { DashboardModule } from '../dashboard/dashboard.module';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { DashboardRoutingModule } from '../dashboard/dashboard-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [HeroesComponent, HeroDetailComponent],
-  imports: [CommonModule, MaterialModule, HeroesRoutingModule, FormsModule],
+  imports: [CommonModule, MaterialModule, HeroesRoutingModule, FormsModule, FlexLayoutModule],
 })
 export class HeroesModule {}
