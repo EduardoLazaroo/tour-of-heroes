@@ -18,7 +18,7 @@
     },
     {
       "id": 5,
-      "name": "Mulher gato"
+      "name": "Mulher gatu"
     },
     {
       "id": 6,
@@ -27,6 +27,10 @@
     {
       "id": 7,
       "name": "Capitão America"
+    },
+    {
+      "name": "aaa",
+      "id": 8
     }
   ]
 }
