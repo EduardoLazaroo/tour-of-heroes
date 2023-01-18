@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [AppComponent],
   providers: [],
