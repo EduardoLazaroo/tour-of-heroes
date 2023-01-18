@@ -1,16 +1,12 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Wolverine"
-    },
-    {
       "id": 2,
-      "name": "Mulher Maravilhaaa"
+      "name": "Mulher Maravilha"
     },
     {
       "id": 3,
-      "name": "Supermann"
+      "name": "Superman"
     },
     {
       "id": 4,
@@ -18,11 +14,15 @@
     },
     {
       "id": 5,
-      "name": "Mulher gatu"
+      "name": "Mulher gato"
     },
     {
       "id": 6,
       "name": "Pantera Negra"
+    },
+    {
+      "name": "seila",
+      "id": 7
     }
   ]
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Hero } from 'src/app/core/models/hero.model';
 import { HeroService } from 'src/app/core/services/hero.service';
 
@@ -11,7 +12,7 @@ export class HeroesComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'actions'];
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) {}
+  constructor(private heroService: HeroService, private router: Router) {}
 
   ngOnInit(): void {
     this.getHeroes();
@@ -24,7 +25,10 @@ export class HeroesComponent implements OnInit {
   delete(hero: Hero): void{
     this.heroService.delete(hero).subscribe(()=> {
       this.getHeroes()
-      // this.heroes = this.heroes.filter(h => h !== hero)
     })
+  }
+
+  onSelected(hero: Hero): void{
+    this.router.navigate(['/heroes', hero.id])
   }
 }
