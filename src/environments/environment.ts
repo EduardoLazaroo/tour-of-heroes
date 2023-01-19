@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   // baseUrl: '/api',
   baseUrl: 'https://curso-tour-of-heroes-api.fly.dev/api',
 

@@ -1,5 +1,5 @@
-.field{
- background-color: rgb(227, 220, 220);
+.field {
+  background-color: rgb(117, 117, 117);
 }
 
 .input-width {
@@ -8,4 +8,22 @@
   @media only screen and (max-width: 600px) {
     width: 100%;
   }
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid rgb(97, 38, 38);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+.d-flex{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
 }

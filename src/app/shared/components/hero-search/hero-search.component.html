@@ -1,23 +1,25 @@
-<mat-form-field appearance="outline" class="input-width">
-  <mat-label>{{ label }}</mat-label>
-  <input
-  [matAutocomplete]="auto"
-    class="field"
-    #searchBox
-    matInput
-    placeholder="Hero name"
-    type="text"
-    (input)="search(searchBox.value)"
-  />
+<div class="input-width" appearance="outline" >
+  <!-- <mat-label>{{ label }}</mat-label> -->
+  <div class="d-flex">
+    <input
+    [matAutocomplete]="auto"
+      class="field"
+      #searchBox
+      matInput
+      placeholder="Hero search"
+      type="text"
+      (input)="search(searchBox.value)"
+    />
 
- <button
-    mat-icon-button
-    matSuffix
-    *ngIf="searchBox.value"
-    (click)="searchBox.value = ''"
-  >
-    <mat-icon>close</mat-icon>
-  </button>
+   <button
+      mat-icon-button
+      matSuffix
+      *ngIf="searchBox.value"
+      (click)="searchBox.value = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
 
   <mat-autocomplete
     #auto="matAutocomplete"
@@ -27,4 +29,4 @@
       {{ hero.name }}
     </mat-option>
   </mat-autocomplete>
-</mat-form-field>
+</div>
