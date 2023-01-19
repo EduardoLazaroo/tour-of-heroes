@@ -50,21 +50,21 @@ export class HeroService {
   create(hero: Hero): Observable<Hero> {
     return this.http
       .post<Hero>(this.heroesUrl, hero)
-      .pipe(tap((hero) => this.log(`create ${this.descAttributes(hero)}`)));
+      .pipe(tap((hero) => this.log(`CREATE ${this.descAttributes(hero)}`)));
   }
 
   // PUT /heroes/id
   update(hero: Hero): Observable<Hero> {
     return this.http
       .put<Hero>(this.getUrl(Number(hero.id)), hero)
-      .pipe(tap((hero) => this.log(`updated ${this.descAttributes(hero)}`)));
+      .pipe(tap((hero) => this.log(`UPDATED ${this.descAttributes(hero)}`)));
   }
 
   //Delete /heroes/id
   delete(hero: Hero): Observable<any> {
     return this.http
       .delete<any>(this.getUrl(Number(hero.id)))
-      .pipe(tap(() => this.log(`Deleted ${this.descAttributes(hero)}`)));
+      .pipe(tap(() => this.log(`DELETED ${this.descAttributes(hero)}`)));
   }
 
   private descAttributes(hero: Hero): string {

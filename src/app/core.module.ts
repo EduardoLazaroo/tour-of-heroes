@@ -10,6 +10,7 @@ import { LoadingComponent } from './core/components/loading/loading.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 import { HttpErrorInterceptor } from './core/interceptors/http-error.interceptor';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
 
 const COMPONENTS = [
   MessagesComponent,
@@ -32,6 +33,11 @@ const MODULES = [FlexLayoutModule, MaterialModule, RouterModule];
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
       multi: true
     }
   ],
